@@ -31,7 +31,14 @@ class Routines:
 
     def get_bread(self):
         # Morning routine, will be activated by saying Jarvis
+        print("Good morning Jorden, beautiful day isn't it?")
         syn_speech("Good morning Jorden, beautiful day isn't it?")
+
+        print(f"Today is {self.get_datetime()[0]}, and it is currently {self.get_datetime()[1]}.")
         syn_speech(f"Today is {self.get_datetime()[0]}, and it is currently {self.get_datetime()[1]}.")
+
+        print(f"Outside, it feels like {self.get_weather()[0]} with {self.get_weather()[1]}.")
         syn_speech(f"Outside, it feels like {self.get_weather()[0]} with {self.get_weather()[1]}.")
+
+        print("It's time to wake up and work hard . . . . . . Lets get this bread!")
         syn_speech("It's time to wake up and work hard . . . . . . Lets get this bread!")

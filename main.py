@@ -34,6 +34,7 @@ if __name__ == '__main__':
 
             # Joining all of the messages with blank space and then speaking them
             message = " ".join(speechList)
+            print(message)
             syn_speech(message)
 
         elif action == "exit":
