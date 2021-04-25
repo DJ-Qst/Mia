@@ -12,6 +12,7 @@ if __name__ == '__main__':
     # You have to construct messages with f strings
     while True:
         action = str.lower(input(f"{secrets['Name']}: "))
+        action = action.split(" ")
         if "get" and "bread" in action:
             # Creates a routines instance and runs the Lets Get This Bread routine
             routines = Routines()
