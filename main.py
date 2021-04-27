@@ -10,20 +10,21 @@ from configFile import secrets
 if __name__ == '__main__':
     # IMPORTANT: There are no prebuilt messages so things like get_weather()[0] have no extra words, its only values
     # You have to construct messages with f strings
+    options = ["date", "time", "temperature", "status"]
     while True:
         action = str.lower(input(f"{secrets['Name']}: "))
-        action = action.split(" ")
+
         if "get" and "bread" in action:
             # Creates a routines instance and runs the Lets Get This Bread routine
             routines = Routines()
             routines.get_bread()
 
-        elif "date" or "time" or "temperature" or "status" in action:
+        elif any(opt in action for opt in options):
             # Creates a routines instance and decides on what to say
             routines = Routines()
             speechList = []  # List to store messages
 
-            # Cycling through each keyword to find matches and then appending them to the list
+            # Cycling through each option to find matches and then appending them to the list
             if "date" in action:
                 speechList.append(f"Today is {routines.get_datetime()[0]}")
             if "time" in action:

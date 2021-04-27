@@ -1,6 +1,6 @@
 from currentTime import TodayStuff
 from generateSpeech import syn_speech
-from weather import WeatherData
+from WeatherScripts.currentWeather import CurrentWeatherData
 
 
 # This program just simplifies my voice commands options
@@ -9,7 +9,7 @@ from weather import WeatherData
 class Routines:
     def __init__(self):
         self.today_class = TodayStuff()
-        self.weather_class = WeatherData()
+        self.weather_class = CurrentWeatherData()
 
     def get_datetime(self):
         # Necessary to call this each time to get information
